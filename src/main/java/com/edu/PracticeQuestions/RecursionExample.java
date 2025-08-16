@@ -1,7 +1,7 @@
 package com.edu.PracticeQuestions;
 
 public class RecursionExample {
-
+    static int i = 0;
     /**
      * @param args
      *
@@ -12,13 +12,28 @@ public class RecursionExample {
     }
 
     static void greeting(){
-        System.out.println("greeting is a static method");
-       RecursionExample example = new RecursionExample();
-       example.greet();
+        try {
+            System.out.println("greeting is a static method");
+            RecursionExample example = new RecursionExample();
+            example.greet();
+            i++;
+        } catch (Error e) {
+            System.out.println(e.getMessage());
+            System.out.println(i);
+            throw new RuntimeException();
+        }
+
     }
 
     void greet()    {
-        System.out.println("greet is a non static method");
-        greeting();
+        try {
+            System.out.println("greet is a non static method");
+            greeting();
+            i++;
+        } catch (Error e) {
+            System.out.println(e.getMessage());
+            System.out.println(i);
+            throw new RuntimeException();
+        }
     }
 }
