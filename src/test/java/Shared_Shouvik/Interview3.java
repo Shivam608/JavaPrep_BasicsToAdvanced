@@ -7,7 +7,8 @@ public class Interview3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String str = "dad mom child dad";
-		String[] str1 = str.split(" ");
+
+		/*String[] str1 = str.split(" ");
 		String ans = "";
 		
 		for(int i=0;i<str1.length;i++)
@@ -23,6 +24,8 @@ public class Interview3 {
 			}
 			
 		}
+
+		System.out.println(ans);
 
 		
 		String[] ans1 = ans.split(" ");
@@ -49,7 +52,38 @@ public class Interview3 {
 			}
 		}
 
+*/
 
+		StringBuilder b = new StringBuilder();
+
+		for (String s : str.split(" ")) {
+			String s_ = String.valueOf(new StringBuilder(s).reverse());
+			if(s_.equals(s)) {
+				b.append(s_).append(" ");
+			}
+		}
+
+		System.out.println(b);
+
+		HashMap<String, Integer> hashMap = new HashMap<>();
+		for (String s : String.valueOf(b).split(" ")) {
+			if (!hashMap.containsKey(s)) {
+				hashMap.put(s, 1);
+			} else {
+				hashMap.put(s, hashMap.get(s)+1);
+			}
+		}
+
+//		System.out.println(hashMap.size());
+
+		for (String s : String.valueOf(b).split(" ")) {
+			if (hashMap.containsKey(s)) {
+				if (hashMap.get(s)>1) {
+					System.out.println(s);
+					break;
+				}
+			}
+		}
 	}
 
 }

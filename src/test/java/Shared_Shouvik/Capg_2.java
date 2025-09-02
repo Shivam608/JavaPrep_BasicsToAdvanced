@@ -1,3 +1,4 @@
+package Shared_Shouvik;
 
 public class Capg_2 {
 
@@ -9,7 +10,7 @@ public class Capg_2 {
 		//Output:
 		//I evol my country
 		
-		String input = "I love my country";
+		/*String input = "I love my country";
 		String[] str = input.split(" ");
 		StringBuilder ans = new StringBuilder();
 		for(int i=0;i<str.length;i++)
@@ -25,9 +26,26 @@ public class Capg_2 {
 				ans.append(temp+ " ");
 			}
 		}
-		System.out.println(ans);
-		
-		
+		System.out.println(ans);*/
+
+		int elementIndexToReverse = 0;
+		String str = "I love my country";
+
+		 int n = elementIndexToReverse + 1;
+
+		 String elementToBeReversed = str.split(" ")[n];
+		 StringBuilder b = new StringBuilder();
+		for (int i = elementToBeReversed.length()-1; i >= 0; i--) {
+			b.append(elementToBeReversed.charAt(i));
+		}
+
+		String reversedElement = String.valueOf(b);
+
+		str = str.replace(elementToBeReversed, reversedElement);
+
+		System.out.println(str);
+
+
 
 	}
 

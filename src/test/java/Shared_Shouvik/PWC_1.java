@@ -4,7 +4,7 @@ public class PWC_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {2,8,10,4,5,11,12,13};
+		int[] arr = {2,8,10,4,5,11,12,13,16};
 		Arrays.sort(arr);
 		for(int i=0;i<arr.length;i++)
 		{
